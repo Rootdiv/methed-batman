@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/normalize.css" />
     <link rel="stylesheet" href="./style/style.css" />
+    <link rel="preload" href="./fonts/roboto-v29-latin_cyrillic-regular.woff2" as="font" type="font/woff2"
+      crossorigin />
+    <link rel="preload" href="./fonts/roboto-v29-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin />
     <title>Бэтмен 2022</title>
   </head>
   <body>
@@ -27,13 +30,14 @@
         <p class="header__hashtag">#TheBatman</p>
         <ul class="header__social social">
           <li class="social__item">
-            <a href="#" class="social__link"></a>
+            <a href="https://facebook.com/" target="_blank" class="social__link" aria-label="Ссылка на Facebook">fb</a>
           </li>
           <li class="social__item">
-            <a href="#" class="social__link"></a>
+            <a href="https://twitter.com/" target="_blank" class="social__link" aria-label="Ссылка на Twitter">tw</a>
           </li>
           <li class="social__item">
-            <a href="#" class="social__link"></a>
+            <a href="https://instagram.com/" target="_blank" class="social__link"
+              aria-label="Ссылка на Instagram">inst</a>
           </li>
         </ul>
       </nav>
@@ -42,7 +46,7 @@
         <label for="mute" class="mute__label">Звук</label>
       </div>
     </header>
-    <main class="main">
+    <main class="main main--index">
       <img src="./img/batman.png" alt="Логотип к фильму Бэтмен" class="logo" width="329" height="235" />
     </main>
     <footer class="footer">
