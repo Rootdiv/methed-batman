@@ -106,18 +106,20 @@ p {
   width: 24px;
   height: 24px;
   display: block;
+  color: #FFFFFF;
+  transition: color 0.3s ease-in-out;
 }
 
-.social__link--facebook {
-  background-image: url('../img/facebook.svg');
+.social__link--facebook:hover {
+  color: #1877F2;
 }
 
-.social__link--twitter {
-  background-image: url('../img/twitter.svg');
+.social__link--twitter:hover {
+  color: #1D9BF0
 }
 
-.social__link--instagram {
-  background-image: url('../img/instagram.svg');
+.social__link--instagram:hover {
+  color: #f77737;
 }
 
 .mute {
