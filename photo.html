@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/normalize.css" />
+    <link rel="stylesheet" href="./style/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./style/style.css" />
-    <link rel="preload" href="./fonts/roboto-v29-latin_cyrillic-regular.woff2" as="font" type="font/woff2"
-      crossorigin />
-    <link rel="preload" href="./fonts/roboto-v29-latin_cyrillic-regular.woff" as="font" type="font/woff" crossorigin />
+    <script defer src="./js/swiper-bundle.min.js"></script>
+    <script defer src="./js/script.js"></script>
     <title>Бэтмен 2022</title>
   </head>
   <body>
     <header class="header">
-      <button class="burger">Бургер меню</button>
+      <button class="burger"></button>
       <nav class="header__navigation navigation">
-        <button class="navigation__close">Закрытие бургер меню</button>
+        <button class="navigation__close"></button>
         <ul class="navigation__list">
           <li class="navigation__item">
             <a href="index.html" class="navigation__link">Главная</a>
@@ -48,8 +48,53 @@
         <label for="mute" class="mute__label">Звук</label>
       </div>
     </header>
-    <main class="main main--index">
-      <img src="./img/batman.png" alt="Логотип к фильму Бэтмен" class="logo" width="329" height="235" />
+    <main class="main main--slider">
+      <div class="slider-main swiper">
+        <ul class="slider-main__list swiper-wrapper">
+          <li class="slider-main__item swiper-slide">
+            <img src="./photo/photo01.jpg" alt="фото" class="slider-main__img" />
+          </li>
+          <li class="slider-main__item swiper-slide">
+            <img src="./photo/photo02.jpg" alt="фото" class="slider-main__img" />
+          </li>
+          <li class="slider-main__item swiper-slide">
+            <img src="./photo/photo03.jpg" alt="фото" class="slider-main__img" />
+          </li>
+          <li class="slider-main__item swiper-slide">
+            <img src="./photo/photo04.jpg" alt="фото" class="slider-main__img" />
+          </li>
+          <li class="slider-main__item swiper-slide">
+            <img src="./photo/photo05.jpg" alt="фото" class="slider-main__img" />
+          </li>
+        </ul>
+      </div>
+      <div class="pagination">
+        <button class="pagination__arrow"></button>
+        <div class="slider-thumbs swiper">
+          <ul class="slider-thumbs__list swiper-wrapper">
+            <li class="slider-thumbs__item swiper-slide">
+              <img src="./photo/photo01-thumbs.jpg" alt="превью фото" class="slider-thumbs__img" width="260"
+                height="100" />
+            </li>
+            <li class="slider-thumbs__item swiper-slide">
+              <img src="./photo/photo02-thumbs.jpg" alt="превью фото" class="slider-thumbs__img" width="260"
+                height="100" />
+            </li>
+            <li class="slider-thumbs__item swiper-slide">
+              <img src="./photo/photo03-thumbs.jpg" alt="превью фото" class="slider-thumbs__img" width="260"
+                height="100" />
+            </li>
+            <li class="slider-thumbs__item swiper-slide">
+              <img src="./photo/photo04-thumbs.jpg" alt="превью фото" class="slider-thumbs__img" width="260"
+                height="100" />
+            </li>
+            <li class="slider-thumbs__item swiper-slide">
+              <img src="./photo/photo05-thumbs.jpg" alt="превью фото" class="slider-thumbs__img" width="260"
+                height="100" />
+            </li>
+          </ul>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <ul class="footer__links">
