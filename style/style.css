@@ -77,6 +77,7 @@ p {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
+  z-index: 700;
 }
 
 .navigation__list {
@@ -235,7 +236,9 @@ p {
 }
 
 .main--slider {
-  height: calc(100% - 120px);
+  height: calc(100% - 100px);
+  overflow: hidden;
+  padding-bottom: 10px;
 }
 
 .slider-main {
@@ -257,6 +260,12 @@ p {
   background-color: #000000;
   min-height: 144px;
   padding: 12px 20px 15px;
+  transform: translateY(calc(100% - 25px));
+  transition: transform 0.5s ease-in-out;
+}
+
+.pagination--active {
+  transform: translateY(0);
 }
 
 .pagination__arrow {
@@ -266,19 +275,35 @@ p {
   height: 0;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-bottom: 6px solid transparent;
-  border-top: 6px solid #FFFFFF;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid #FFFFFF;
   background-color: transparent;
   transition: border-color 0.3s ease-in-out;
 }
 
+.pagination--active .pagination__arrow {
+  border-bottom: 6px solid transparent;
+  border-top: 6px solid #FFFFFF;
+}
+
 .pagination__arrow:hover {
+  border-bottom-color: #E90000;
+}
+
+.pagination--active .pagination__arrow:hover {
+  border-bottom-color: transparent;
   border-top-color: #E90000;
 }
 
 .slider-thumbs {
   max-width: 820px;
 }
+
+.slider-thumbs__img {
+  max-height: 100px;
+  object-fit: cover;
+}
+
 
 .slider-main__video {
   width: 100%;
