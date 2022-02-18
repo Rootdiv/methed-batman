@@ -206,6 +206,7 @@ p {
 
 .logo {
   animation: zoomIm 1s;
+  image-rendering: optimizeQuality;
 }
 
 @keyframes zoomIm {
@@ -340,10 +341,10 @@ p {
   .navigation {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -240px;
     bottom: 0;
     width: 240px;
-    transform: translateX(-240px);
+    transform: translateX(0);
     background-color: #260707;
     flex-direction: column;
     justify-content: flex-start;
@@ -354,7 +355,7 @@ p {
   }
 
   .navigation--active {
-    transform: translateX(0);
+    transform: translateX(240px);
   }
 
   .navigation__list {

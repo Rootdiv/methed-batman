@@ -38,16 +38,23 @@ try {
 }
 
 try {
+  const pagination = document.querySelector('.pagination');
+  const paginationButton = document.querySelector('.pagination__arrow');
+  const videos = document.querySelectorAll('video');
+
   const sliderThumbs = new Swiper('.slider-thumbs', {
     loop: true,
     spaceBetween: 20,
     slidesPerView: 3,
     centeredSlides: true,
     loopedSlides: 4,
+    grabCursor: true,
   });
 
   sliderThumbs.on('click', swiper => {
     swiper.slideTo(swiper.clickedIndex);
+    pagination.classList.toggle('pagination--active');
+    videos[swiper.realIndex].play();
   });
 
   const sliderMain = new Swiper('.slider-main', {
@@ -58,15 +65,12 @@ try {
 
   sliderThumbs.controller.control = sliderMain;
   sliderMain.controller.control = sliderThumbs;
-  const videos = document.querySelectorAll('video');
   sliderMain.on('slideChange', () => {
     for (let i = 0; i < videos.length; i++) {
       videos[i].pause();
     }
   });
 
-  const pagination = document.querySelector('.pagination');
-  const paginationButton = document.querySelector('.pagination__arrow');
   paginationButton.addEventListener('click', () => {
     pagination.classList.toggle('pagination--active');
   });
