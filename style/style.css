@@ -66,7 +66,6 @@ p {
 .header {
   position: relative;
   padding: 9px 0;
-  /* height: 50px; */
 }
 
 .navigation {
@@ -216,7 +215,7 @@ p {
 }
 
 .footer {
-  padding: 10px;
+  padding: 11px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -398,7 +397,6 @@ p {
   }
 
   .footer {
-    padding: 20px;
     text-align: center;
   }
 }
